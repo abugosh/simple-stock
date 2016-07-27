@@ -1,0 +1,20 @@
+
+{{#if model}}
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Symbol</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model key="id" as |stock|}}
+        {{stock-tr stock=stock}}
+      {{/each}}
+    </tbody>
+  </table>
+{{/if}}
+{{#unless model}}
+  <p class="not-found">No companies found.</p>
+{{/unless}}

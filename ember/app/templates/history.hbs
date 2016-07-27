@@ -1,0 +1,7 @@
+<div class="panel panel-default">
+  <div class="panel-heading stock-header">{{model.stock.name}} | {{model.stock.exchange}}:{{model.stock.symbol}}</div>
+  <div class="panel-body">
+    {{#history-div quotes=model.quotes}}
+    {{/history-div}}
+  </div>
+</div>
